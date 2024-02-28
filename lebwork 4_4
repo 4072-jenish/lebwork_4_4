@@ -1,0 +1,42 @@
+import 'dart:math';
+
+class Employee {
+   int id;
+   String name;
+   String designation;
+   double salary;
+   int experience;
+   int age;
+   String qualification;
+   String gender;
+   String companyName;
+   String mobileNumber;
+
+  Employee(this.id, this.name, this.designation, this.salary, this.experience, this.age, this.qualification, this.gender, this.companyName, this.mobileNumber);
+
+  factory Employee.createEmployee(int id, String name, String designation, double salary, int experience, int age, String qualification, String gender, String companyName, String mobileNumber) {
+    return Employee(id, name, designation, salary, experience, age, qualification, gender, companyName, mobileNumber);
+  }
+
+  
+}
+
+void main() {
+  List<Employee> employees = [];
+  for (int i = 0; i < 20; i++) {
+    employees.add(Employee.createEmployee());
+  }
+  employees.forEach((employee) {
+    print('Employee Id: ${employee.id}');
+    print('Employee Name: ${employee.name}');
+    print('Employee Designation: ${employee.designation}');
+    print('Employee Salary: ${employee.salary}');
+    print('Employee Experience: ${employee.experience}');
+    print('Employee Age: ${employee.age}');
+    print('Employee Qualification: ${employee.qualification}');
+    print('Employee Gender: ${employee.gender}');
+    print('Employee Company Name: ${employee.companyName}');
+    print('Employee Mobile Number: ${employee.mobileNumber}');
+    print('');
+  });
+}
